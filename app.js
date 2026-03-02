@@ -18,7 +18,7 @@ app.use(express.json());
 // 生成 Token 接口
 app.post('/token', (req, res) => {
   const { userId } = req.body;
-
+  console.log('userId:', userId);
   if (!userId) {
     return res.status(400).json({ error: 'userId 是必填项' });
   }
